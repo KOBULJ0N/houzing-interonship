@@ -33,10 +33,8 @@ export const Recommended = () => {
             items={items}
           />
           <ArrowRight onClick={() => slider.current?.slidePrev()}>
-            &lang;
           </ArrowRight>
           <ArrowLeft onClick={() => slider.current?.slideNext()}>
-            &rang;
           </ArrowLeft>
         </Cards>
       </Wrapper>

@@ -1,6 +1,6 @@
 import React from "react";
 import noimg from "../../assets/images/noimg.jpg";
-import nouser from "../../assets/images/nouser.png";
+import nouser from "../../assets/images/avatar1.png";
 
 import {
   Container,

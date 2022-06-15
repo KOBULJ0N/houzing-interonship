@@ -5,7 +5,9 @@ import { Root } from "./root";
 import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 
-import "antd/dist/antd.css";
+
+// import "antd/dist/antd.css";
+import 'antd/dist/antd.min.css';
 import "react-alice-carousel/lib/alice-carousel.css";
 
 const queryClient = new QueryClient();

@@ -23,10 +23,10 @@ const getType = (type) => {
 
 const Container = styled.input`
   display: flex;
-  height: ${({ height }) => height || "44px"};
-  width: ${({ width }) => (width ? width : "100%")};
+  height: ${({ height }) => height || '44px'};
+  width: ${({ width }) => (width ? width : '100%')};
   border-radius: 2px;
-  padding-left: ${({ pl }) => pl || "15px"};
+  padding-left: ${({ pl }) => pl || '15px'};
   padding: ${({ pd }) => `${pd}px`};
   padding-top: ${({ pt }) => `${pt}px`};
   padding-bottom: ${({ pb }) => `${pb}px`};
@@ -40,6 +40,11 @@ const Container = styled.input`
   line-height: 20px;
   color: #0d263b;
   border: 1px solid #e6e9ec;
+  outline: none;
+
+  &:focus {
+    border: 2px solid #0061DF;
+  }
   /* ${({ type }) => getType(type)} */
 `;
 

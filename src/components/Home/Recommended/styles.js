@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { ReactComponent as arrow } from '../../../assets/icons/left-arrow.svg';
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -17,35 +17,36 @@ const Cards = styled("div")`
   width: 1440px;
   margin-top: 32px;
   justify-content: space-between;
+  padding:0 130px;
+
+
 `;
 
-const ArrowLeft = styled.div`
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+const ArrowLeft = styled(arrow)`
   top: 50%;
   right: 20px;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%) rotate(180deg);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 45px;
   height: 45px;
+  padding: 12px;
   color: black;
-  background: white;
+  background-color: white;
   opacity: 0.5;
-  padding-left: 10px;
+  border-radius: 50%;
+  cursor: pointer;
   box-shadow: 0px 10px 50px rgba(13, 38, 59, 0.1);
   filter: drop-shadow(0px 20px 38px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 7px 46px rgba(0, 0, 0, 0.06))
     drop-shadow(0px 8px 15px rgba(0, 0, 0, 0.06));
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 999;
   :hover {
-    opacity: 1;
+    opacity: 0.97;
   }
-  :active {
-    opacity: 0.7;
+  & path {
+    fill: #0d263b;
   }
 `;
 
@@ -56,4 +57,9 @@ const ArrowRight = styled(ArrowLeft)`
   padding-right: 10px;
 `;
 
-export { Container, Cards, ArrowLeft, Wrapper, ArrowRight };
+const IconArrow = styled(arrow)`
+  width: 7px;
+  height: 12px;
+`;
+
+export { Container, Cards, ArrowLeft, Wrapper, ArrowRight, IconArrow };

@@ -1,22 +1,23 @@
-import styled from "styled-components";
-import { ReactComponent as bed } from "../../assets/icons/beds.svg";
-import { ReactComponent as bath } from "../../assets/icons/bath.svg";
-import { ReactComponent as garage } from "../../assets/icons/car.svg";
-import { ReactComponent as ruler } from "../../assets/icons/ruler.svg";
-import { ReactComponent as heart } from "../../assets/icons/love 1.svg";
-import { ReactComponent as resize } from "../../assets/icons/arrow-top-bottom.svg";
+import styled from 'styled-components';
+import { ReactComponent as bed } from '../../assets/icons/beds.svg';
+import { ReactComponent as bath } from '../../assets/icons/bath.svg';
+import { ReactComponent as garage } from '../../assets/icons/car.svg';
+import { ReactComponent as ruler } from '../../assets/icons/ruler.svg';
+import { ReactComponent as heart } from '../../assets/icons/love 1.svg';
+import { ReactComponent as resize } from '../../assets/icons/arrow-top-bottom.svg';
 
 const Container = styled.div`
+  cursor: pointer;
   display: flex;
   overflow: hidden;
   flex-direction: column;
   width: 100%;
   /* width: 380px; */
-  min-width: 250px;
+  min-width: 380px;
   max-width: 380px;
   height: 450px;
   background: #ffffff;
-  margin: ${({ margin }) => margin && "0 1em"};
+  margin: ${({ margin }) => margin && '0 1em'};
   margin-bottom: 10px;
   border: 1px solid #e6e9ec;
   border-radius: 3px;
@@ -53,7 +54,7 @@ const Info = styled.div``;
 
 Info.Title = styled.div`
   display: flex;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -68,7 +69,7 @@ Info.Text = styled.div`
   display: flex;
   white-space: nowrap;
   overflow: hidden;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -148,7 +149,7 @@ Icons.Love = styled(heart)`
   :active {
     transform: scale(0.97);
   }
-/*   
+  /*   
   path{
     stroke: white;
   }

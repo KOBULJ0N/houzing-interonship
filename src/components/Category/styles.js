@@ -17,6 +17,7 @@ const Cards = styled("div")`
   width: 1440px;
   margin-top: 32px;
   justify-content: space-between;
+  padding: 0 130px;
 `;
 
 const ArrowLeft = styled.div`

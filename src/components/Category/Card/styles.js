@@ -1,24 +1,29 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import {ReactComponent as villa} from '../../../assets/icons/villa.svg'
+
 
 const Container = styled.div`
   width: 280px;
   height: 350px;
-  box-shadow: 0px 20px 38px rgba(0, 0, 0, 0.06),
-    0px 7px 46px rgba(0, 0, 0, 0.06), 0px 8px 15px rgba(0, 0, 0, 0.06);
-  border-radius: 3px;
-  position: relative;
+  background-image: url(${({imgUrl})=>imgUrl});
+  background-position: center;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  gap: 24px;
+
+  :hover {
+    box-shadow: 0px 20px 38px rgba(0, 0, 0, 0.06),
+      0px 7px 46px rgba(0, 0, 0, 0.06), 0px 8px 15px rgba(0, 0, 0, 0.06);
+  }
+  cursor: pointer;
 `;
 
-const Image = styled.img``;
-
 const Title = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-10%, -50%);
-
+  /* transform: translate(-10%, -50%); */
   text-align: center;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 18px;
@@ -26,4 +31,6 @@ const Title = styled.div`
   color: #ffffff;
 `;
 
-export { Container, Image, Title };
+const Icon = styled(villa)``
+
+export { Container,Icon, Title };
