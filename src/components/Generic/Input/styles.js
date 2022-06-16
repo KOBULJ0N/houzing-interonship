@@ -1,22 +1,22 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const getType = (type) => {
   switch (type) {
-    case "secondary":
+    case 'secondary':
       return {
-        border: "1px solid #e6e9ec",
-        color: "#0d263b",
+        border: '1px solid #e6e9ec',
+        color: '#0d263b',
       };
-    case "primary":
+    case 'primary':
       return {
-        background: "#0061df",
-        color: "#ffffff",
-        border: "none",
+        background: '#0061df',
+        color: '#ffffff',
+        border: 'none',
       };
     default:
       return {
-        border: "1px solid #e6e9ec",
-        color: "#ffffff",
+        border: '1px solid #e6e9ec',
+        color: '#ffffff',
       };
   }
 };
@@ -39,11 +39,12 @@ const Container = styled.input`
   font-size: 14px;
   line-height: 20px;
   color: #0d263b;
-  border: 1px solid #e6e9ec;
+  border: 0px solid #e6e9ec;
+  border-bottom: 2px solid #e6e9ec;
   outline: none;
 
-  &:focus {
-    border: 2px solid #0061DF;
+  :focus {
+    border-bottom: 2px solid #0061df;
   }
   /* ${({ type }) => getType(type)} */
 `;

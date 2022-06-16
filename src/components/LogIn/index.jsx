@@ -72,7 +72,6 @@ export const SignIn = () => {
             }}
             value={email}
             width={'100%'}
-            style={{ border: 'none', borderBottom: '1px solid #E6E9EC' }}
             mt={60}
             placeholder={'Email'}
           />
@@ -83,7 +82,6 @@ export const SignIn = () => {
             }
             }
             value={password}
-            style={{ border: 'none', borderBottom: '1px solid #E6E9EC' }}
             mt={40}
             placeholder={'Password'}
           />

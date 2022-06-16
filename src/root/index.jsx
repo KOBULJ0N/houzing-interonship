@@ -7,6 +7,7 @@ import { navbar } from "../utils/navbar";
 export const Root = () => {
   return (
     <Routes>
+      <Route path='/profile' element={<Navigate to={'/profile/properties'} />}/>
       <Route element={<Navbar />}>
         {navbar.map(({ path, Element, id, param }) => {
           return param && <Route key={id} path={path} element={Element} />;
@@ -18,7 +19,7 @@ export const Root = () => {
         })}
         <Route path="/" element={<Navigate to={"/home"} />} />
       </Route>
-      <Route path="*" element={<div>Page Not Found...</div>} />
+      <Route path="*" element={<div>Page Not Found</div>} />
     </Routes>
   );
 };

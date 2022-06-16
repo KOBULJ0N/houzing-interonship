@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   activeStyle,
   Container,
@@ -6,32 +6,47 @@ import {
   NavbarBody,
   NavbarWrapper,
   Wrapper,
-} from "./styles";
-import { Outlet, NavLink, useNavigate, useLocation } from "react-router-dom";
-import { navbar } from "../../utils/navbar";
-import { Button } from "../Generic/Button";
-
-
+} from './styles';
+import { Outlet, NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { navbar } from '../../utils/navbar';
+import { Button } from '../Generic/Button';
 
 export const Navbar = () => {
   const navigate = useNavigate();
-  const location = useLocation()
+  const location = useLocation();
 
   const gotoSignIn = () => {
-    navigate("/signin");
+    navigate('/signin');
   };
-
   const logout = () => {
     localStorage.removeItem('token');
     if (location?.pathname?.includes('profile')) {
       navigate('/home');
-    
+    } else {
+      navigate(location.pathname);
     }
-    else {
-    navigate(location.pathname)
-    }
-  }
+  };
 
+  var button;
+
+  localStorage.getItem('token')
+    ? (button = (
+        <Button onClick={() => navigate('/profile')} width={'120px'}>
+          Profile
+        </Button>
+      ))
+    : (button = (
+        <Button onClick={gotoSignIn} width={'120px'}>
+          Log In
+        </Button>
+      ));
+  location.pathname.includes('profile') &&
+    (button = (
+      <Button onClick={logout} width={'120px'} type='red'>
+        Log out
+      </Button>
+    ));
+  console.log();
   return (
     <Wrapper className='nocopy'>
       <Container>
@@ -51,22 +66,7 @@ export const Navbar = () => {
               );
             })}
           </NavbarBody>
-          <Logo>
-            {localStorage.getItem('token') ? (
-              <>
-                <Button onClick={logout} width={'120px'}>
-                  Log out
-                </Button>
-                <Button onClick={logout} width={'120px'}>
-                  Log out
-                </Button>
-              </>
-            ) : (
-              <Button onClick={gotoSignIn} width={'120px'}>
-                Log In
-              </Button>
-            )}
-          </Logo>
+          <Logo>{button}</Logo>
         </NavbarWrapper>
       </Container>
       <Outlet />

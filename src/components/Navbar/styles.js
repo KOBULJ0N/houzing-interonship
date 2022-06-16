@@ -5,6 +5,13 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primaryColor);
+`;
 const NavbarWrapper = styled.div`
   display: flex;
   height: 64px;
@@ -36,12 +43,7 @@ const NavbarBody = styled.div`
   justify-content: center;
   color: white;
 `;
-const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--primaryColor);
-`;
+
 const activeStyle = ({isActive}) => {
     return {
         color: isActive ? '#00fff5' : 'white',
